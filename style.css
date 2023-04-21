@@ -1,0 +1,115 @@
+/* fonte para o projeto */
+@font-face {
+  font-family: njnaruto;
+  src: url("fontes/njnaruto.ttf");
+}
+
+/* aqui eu coloquei as configurações gerais*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: njnaruto;
+}
+
+/* aqui eu coloquei uma estrutura para o site */
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* imagem de fundo */
+body {
+  background: url("imagens/ends-valley.png") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* aqui eu configurei as imagens dos jogadores */
+.jogador1,
+.jogador2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.jogador1 {
+  left: 12%;
+}
+
+.jogador2 {
+  right: 12%;
+}
+
+.jogador1 img,
+.jogador2 img {
+  border-radius: 100%;
+  width: 95%;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.jogador1 img:hover,
+.jogador2 img:hover {
+  filter: brightness(3);
+  width: 100%;
+}
+
+/* configuração de tabuleiro*/
+.tabuleiro {
+  height: 510px;
+  width: 500px;
+  margin: 2rem auto auto auto;
+  border: 5px solid saddlebrown;
+}
+
+/* configurações de colunas */
+.coluna {
+  height: 62.5px;
+  width: 100%;
+  display: flex;
+}
+
+/* configurações de casas */
+.casa {
+  position: relative;
+  height: 100%;
+  width: 62.5px;
+  padding: 5px;
+}
+
+/* configuração de imagens das peças entro das casas */
+.casa img {
+  width: 100%;
+}
+
+/* configurações dos numeros das casas */
+.span-numero {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+/* configuração das letras das casas */
+.span-letra {
+  position: absolute;
+  bottom: -2px;
+  right: 3px;
+}
+
+/* as cores das casas */
+.laranja {
+  background-color: #ffa500;
+}
+
+.azul {
+  background-color: #0000ff;
+}
